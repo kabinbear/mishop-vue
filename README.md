@@ -1,5 +1,5 @@
 # mishop
-
+每天写一点，坚持一天一个组件，巩固前端基础，手写逻辑不再盲目依赖组件库🐜
 ## Project setup
 ```
 yarn install
@@ -10,15 +10,6 @@ yarn install
 yarn serve
 ```
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 工作进度
+顶部Banner
+[x]
