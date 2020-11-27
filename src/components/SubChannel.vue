@@ -10,9 +10,9 @@
         </li>
       </ul>
     </div>
-    <div class="right-container">
-      <ul class="showlist" v-for="(item, index) in promoList" :key="index">
-        <li class="showitem">
+    <div class="promo-list-container">
+      <ul class="promo-list" >
+        <li class="promo-item" v-for="(item, index) in promoList" :key="index">
           <a :href="item.url" target="_blank"><img :src="item.src" alt="" /></a>
         </li>
       </ul>
@@ -87,5 +87,69 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.sub-channel {
+  display: flex;
+  justify-content: space-between;
+  width: 1226px;
+  margin: 14px auto 26px;
+  height: 170px;
+  .leftbox {
+    width: 260px;
+    height: auto;
+    background: rgb(95, 87, 80);
+  }
+  .channel-list {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 100%;
+    .list-item {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      width: 33%;
+      height: 50%;
+      border: rgb(102, 94, 87) solid 1px;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+    }
+    span {
+      display: inline-block;
+      font-size: 12px;
+      color: #e0e0e0;
+      text-align: center;
+    }
+    &:hover {
+      color: #fff;
+    }
+  }
+  .promo-list-container {
+      margin-left: 14px;
+      width: calc(100% - 248px);
+      .promo-list {
+        display: flex;
+        justify-content: space-between;
+        .promo-item {
+          height: 170px;
+          &:hover {
+            box-shadow: 0 5px 30px #ccc;
+          }
+
+          a {
+            display: inline-block;
+            height: 100%;
+            img {
+              width: 316px;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+}
 </style>

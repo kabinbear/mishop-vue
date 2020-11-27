@@ -29,11 +29,14 @@
         </ul>
       </div>
     </div>
+    <Banner :banners="banners" />
   </div>
 </template>
 
 <script>
+import Banner from "./parts/Banner.vue";
 export default {
+  components: { Banner },
   data() {
     return {
       bannerMenuFlag: false,
@@ -92,27 +95,27 @@ export default {
         },
       ],
       banners: [
-        {
+        { key:1,
           src:
             "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/cefed8336bae62768afeeb6a3b8f55c8.jpg?w=2452&h=920",
           url: "https://www.mi.com/redminote7/",
         },
-        {
+        { key:2,
           src:
             "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/743e04f29f920648b9d99b04a85ce343.jpg?w=2452&h=920",
           url: "https://www.mi.com/a/h/11251.html",
         },
-        {
+        { key:3,
           src:
             "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/3d7d3f2df881cf62e5fafdada94f5018.jpg?w=2452&h=920",
           url: "https://www.mi.com/mitvall-screen/e55c/",
         },
-        {
+        { key:4,
           src:
             "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/6bd4174b8c5aad67a64864a5716ad152.jpg?w=2452&h=920",
           url: "https://www.mi.com/washer-dryer-10/",
         },
-        {
+        { key:5,
           src:
             "https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a1f0eb196c6c65a89ffba6efa4b5679c.jpg?w=2452&h=920",
           url: "https://www.mi.com/a/h/11117.html",
@@ -1207,7 +1210,6 @@ export default {
       return [];
       //注意计算属性要返回值
     },
-    
   },
 };
 </script>
@@ -1225,7 +1227,7 @@ $main-color: #ff6700;
     top: 0;
     width: 235px;
     height: auto;
-    background: (0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 10;
   }
   .leftmenu {
@@ -1233,6 +1235,7 @@ $main-color: #ff6700;
     height: 460px;
     .menu-item {
       display: flex;
+      padding-left: 30px;
       &:hover {
         background: $main-color;
       }
@@ -1242,6 +1245,7 @@ $main-color: #ff6700;
         line-height: 42px;
         display: inline-block;
         text-align: left;
+        color: #fff;
       }
       i {
         font-size: 22px;
@@ -1255,7 +1259,7 @@ $main-color: #ff6700;
     position: absolute;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    left: 185px;
+    left: 235px;
     top: 0;
     .menu-detail {
       display: flex;
@@ -1282,6 +1286,9 @@ $main-color: #ff6700;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
+          &:hover {
+            color: $main-color;
+          }
         }
       }
     }

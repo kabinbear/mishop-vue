@@ -254,7 +254,7 @@ export default {
       height: 96px;
       right: 0;
       top: 40px;
-      z-index: 99;
+      z-index: 10;
       overflow: hidden;
       .cart-list-word {
         text-align: center;
@@ -266,6 +266,7 @@ export default {
   }
 }
 
+//购物车 Cart
 .fade-in-enter-active,
 .fade-in-leave-active {
   transition: all 0.2s ease;
