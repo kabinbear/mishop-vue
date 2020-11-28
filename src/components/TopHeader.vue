@@ -162,7 +162,7 @@ export default {
       .app-qrcode-container {
         position: relative;
         display: inline-block;
-
+        z-index: 99;
         &:hover::before {
           content: "";
           position: absolute;

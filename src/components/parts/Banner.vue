@@ -122,8 +122,8 @@ export default {
   .banner-points {
     position: absolute;
     display: flex;
-    width: 400px;
-    right: -235px;
+    width: 150px;
+    right: -30px;
     left: auto;
     bottom: 20px;
     z-index: 10;

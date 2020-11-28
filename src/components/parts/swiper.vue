@@ -57,7 +57,7 @@ export default {
     },
     prev() {
       const lastindex = parseInt(this.slidItems.length / 4);
-      if (slideIndex > 0) {
+      if (this.slideIndex > 0) {
         this.slideIndex -= 1;
         this.Xvalue = -(this.slideIndex * 992);
       } else {

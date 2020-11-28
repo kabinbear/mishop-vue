@@ -41,7 +41,7 @@ export default {
       hour: "",
       minute: "",
       second: "",
-      countDownTimer:'',
+      countDownTimer: "",
       slideItems: [
         {
           value: "高品质多功能头戴耳机",
@@ -359,9 +359,13 @@ export default {
       }, 1000);
     },
     timeComput() {
-      let hour = 24 - new Date().getHours() - 1;
-      let minute = 60 - new Date().getMinutes() - 1;
-      let second = 60 - new Date().getSeconds() - 1;
+      //1.如果Date没有参数 返回当前系统的当前时间
+      //2.参数常见的写法 数字型 2019,10,01 Date(2019,10,1)
+      //   字符串型 Date('xxxx,xx,xx')
+      //   日期格式化 getXXX()    获取当前月份 0-11
+      let hour = 24 - new Date().getHours();
+      let minute = 60 - new Date().getMinutes();
+      let second = 60 - new Date().getSeconds();
       this.hour = this.addZero(hour);
       this.minute = this.addZero(minute);
       this.second = this.addZero(second);
@@ -387,6 +391,7 @@ export default {
   width: 1226px;
   height: auto;
   margin: 0 auto;
+  overflow: hidden;
   .flashhead {
     display: flex;
     justify-content: space-between;

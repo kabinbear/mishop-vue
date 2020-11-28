@@ -172,8 +172,8 @@ export default {
 
 <style lang="scss">
   .top-header {
-    width: 100%;
     height: 100px;
+    width: 100%;
     .top-container {
       width: 1226px;
       height: 100%;

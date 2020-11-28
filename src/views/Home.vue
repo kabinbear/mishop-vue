@@ -1,11 +1,14 @@
 <template>
-  <div class="index-page">
+  <div>
     <top-header />
     <TopBar />
     <MenuBanner />
     <SubChannel />
     <div class="gray-page">
-      <FlashSale/>
+      <div class="container">
+        <FlashSale />
+        <goods-sale></goods-sale>
+      </div>
     </div>
   </div>
 </template>
@@ -16,7 +19,8 @@ import TopHeader from "../components/TopHeader.vue";
 import TopBar from "../components/TopBar";
 import MenuBanner from "../components/MenuBanner.vue";
 import SubChannel from "../components/SubChannel";
-import FlashSale from '../components/FlashSale.vue';
+import FlashSale from "../components/FlashSale.vue";
+import GoodsSale from "../components/GoodsSale";
 
 export default {
   name: "Home",
@@ -26,6 +30,7 @@ export default {
     MenuBanner,
     SubChannel,
     FlashSale,
+    GoodsSale,
   },
 };
 </script>
@@ -36,5 +41,11 @@ export default {
   width: 100%;
   height: auto;
   background: rgb(245, 245, 245);
+  overflow: hidden;
+}
+.container {
+  width: 1226px;
+  margin-right: auto;
+  margin-left: auto;
 }
 </style>
